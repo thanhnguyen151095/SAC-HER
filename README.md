@@ -60,7 +60,7 @@ Pick And Place | Slide|
 
 
 # Reference
-- SAC: https://arxiv.org/abs/1802.09477
+- SAC: [https://arxiv.org/abs/1802.09477](https://arxiv.org/abs/1801.01290)
   
 - Open AI: https://doi.org/10.48550/arXiv.1707.01495
   
