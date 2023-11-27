@@ -12,29 +12,57 @@ This emphasis on entropy regularization distinguishes SAC from other reinforceme
 
 -  Objective: HER is a technique that addresses the sparse reward problem in reinforcement learning by considering alternative goals for an episode.
 -  Key Features:
--  
 After an episode, the achieved goal is replaced with the desired goal, turning failures into successes for learning purposes.
 This helps in learning from both successful and unsuccessful episodes, improving sample efficiency.
 
 # Combining SAC and HER for Fetch Robot Tasks:
 
 - Training Setup:
-
 Use the SAC algorithm as the base reinforcement learning algorithm.
 Incorporate a replay buffer to store experiences for off-policy learning.
 Integrate HER into the training process to enhance sample efficiency.
-HER Implementation:
 
+- HER Implementation:
 Define a set of goals for each episode, including the original goal and alternative goals.
 If the episode is successful, store the experiences in the replay buffer as usual.
 If the episode is unsuccessful, store the experiences with the alternative goals in the replay buffer.
-- Training Procedure:
 
+- Training Procedure:
 Train the SAC algorithm with the augmented replay buffer that includes both successful and unsuccessful episodes.
 The algorithm learns from the hindsight experiences, improving its ability to achieve goals in future episodes.
 
 - Benefits:
-
 The combination of SAC and HER helps the robot learn from both successes and failures, making the training process more robust.
 HER mitigates the challenge of sparse rewards by providing additional learning signals.
+
+# Results
+|_|_|
+|:---:|:---:|
+![](Figures/Reach.png)| ![](Figures/Push.png)|
+![](Figures/PickAndPlace.png)| ![](Figures/Slide.png)|
+
+# Comparison of Results
+|_|_|
+|:---:|:---:|
+![](Figures/Reach_comparison.png)| ![](Figures/Push_comparison.png)|
+![](Figures/PickAndPlace_comparison.png)| ![](Figures/Slide_comparison.png)|
+
+# Demo
+
+Reach| Push|
+-----------------------|-----------------------|
+![](Videos/Reach.gif)| ![](Videos/Push.gif)|
+
+
+Pick And Place | Slide|
+-----------------------|-----------------------|
+![](Videos/PickAndPlace.gif)|![](Videos/Slide.gif)
+
+
+# Reference
+- SAC: https://arxiv.org/abs/1802.09477
+  
+- Open AI: https://doi.org/10.48550/arXiv.1707.01495
+  
+- Environment: https://robotics.farama.org/envs/fetch/
 
