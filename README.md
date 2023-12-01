@@ -44,8 +44,8 @@ HER mitigates the challenge of sparse rewards by providing additional learning s
 # Comparison of Results
 |_|_|
 |:---:|:---:|
-![](Figures/Reach_comparison.png)| ![](Figures/Push_comparison.png)|
-![](Figures/PickAndPlace_comparison.png)| ![](Figures/Slide_comparison.png)|
+![](Figures/FetchReach-v2_cp.png)| ![](Figures/FetchPush-v2_cp.png)|
+![](Figures/FetchPickAndPlace-v2_cp.png)| ![](Figures/FetchSlide-v2_cp.png)|
 
 # Demo
 
